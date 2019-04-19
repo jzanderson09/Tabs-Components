@@ -60,4 +60,58 @@ class TabItem {
 
 */
 
-links = document.querySelectorAll('.tabs-link').forEach(link => new TabLink(link));
+//5th Link:
+const fifthLink = document.createElement('div');
+fifthLink.className = 'tabs-link';
+fifthLink.dataset.tab = '5';
+fifthLink.textContent = 'Tab 5';
+
+//6th Link:
+const sixthLink = document.createElement('div');
+sixthLink.className = 'tabs-link';
+sixthLink.dataset.tab = '6';
+sixthLink.textContent = 'Tab 6';
+
+const tabLinks = document.querySelector('.tabs-links');
+tabLinks.appendChild(fifthLink);
+tabLinks.appendChild(sixthLink);
+
+//5th Item:
+const fifthItem = document.createElement('div');
+fifthItem.className = 'tabs-item';
+fifthItem.dataset.tab = '5';
+
+const fifthItemTitle = document.createElement('div');
+fifthItemTitle.className = 'tabs-item-title';
+fifthItemTitle.textContent = 'Quote 5';
+
+const fifthItemDescription = document.createElement('div');
+fifthItemDescription.textContent = 'Those who dare to fail miserably can achieve greatly.';
+
+fifthItem.appendChild(fifthItemTitle);
+fifthItem.appendChild(fifthItemDescription);
+
+//6th Item:
+const sixthItem = document.createElement('div');
+sixthItem.className = 'tabs-item';
+sixthItem.dataset.tab = '6';
+
+const sixthItemTitle = document.createElement('div');
+sixthItemTitle.className = 'tabs-item-title';
+sixthItemTitle.textContent = 'Quote 6';
+
+const sixthItemDescription = document.createElement('div');
+sixthItemDescription.textContent = 'It is hard to fail, but it is worse never to have tried to succeed.';
+
+sixthItem.appendChild(sixthItemTitle);
+sixthItem.appendChild(sixthItemDescription);
+
+
+const tabs = document.querySelector('.tabs-items');
+
+tabs.appendChild(fifthItem);
+tabs.appendChild(sixthItem);
+
+const links = document.querySelectorAll('.tabs-link').forEach(link => new TabLink(link));
+
+ 
